@@ -14,4 +14,6 @@ for i in 0..<10 {
     }
 }
 
-print(sum, Double(sum) / cnt)
+var avr = Double(sum) / cnt
+
+print(sum, round(avr*10)/10)
