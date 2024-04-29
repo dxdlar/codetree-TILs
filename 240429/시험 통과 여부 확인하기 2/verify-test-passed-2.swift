@@ -6,8 +6,8 @@ var cnt = 0
 for i in 0..<n {
     var arr = readLine()!.split(separator: " ").map{Int($0)!}
     var sum = 0
-    for j in 0..<n {
-        sum += arr[i]
+    for j in 0...3 {
+        sum += arr[j]
     }
 
     var avr = sum / 4
