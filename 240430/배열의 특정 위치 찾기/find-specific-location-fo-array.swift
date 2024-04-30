@@ -15,4 +15,4 @@ for j in stride(from: 2, through: 9, by: 3) {
     cnt += 1
 }
 
-print(sum1, (Double(sum2) / Double(cnt) * 10) / 10)
+print(sum1, round(Double(sum2) / Double(cnt) * 10) / 10)
