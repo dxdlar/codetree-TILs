@@ -6,7 +6,7 @@ var cnt_arr = arr
 var new_arr: [Int] = []
 var cnt = 0
 
-// 순서 : 최댓값 찾기 -> cnt 구하기, 저장 -> cnt 까지 배열 자르기 -> 반복
+// 순서 : 최댓값 찾기 -> cnt 구하기, 저장 -> cnt-1 까지 배열 자르기 -> 반복
 // 주의점 : arr.max 사용, arr가 계속 변해야 함, while로 반복, max 값으로 new_arr에 append
 
 while true {
@@ -21,7 +21,7 @@ while true {
         break
     }
     cnt_arr = []
-    for j in new_arr {
+    for j in 0..<cnt-1 {
         cnt_arr.append(arr[j])
     }
     cnt = 0
