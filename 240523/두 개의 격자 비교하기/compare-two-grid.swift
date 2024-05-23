@@ -16,8 +16,8 @@ for _ in 0..<n {
     arr2.append(readLine()!.split(separator: " ").map{Int($0)!})
 }
 
-for i in 0..<m {
-    for j in 0..<n {
+for i in 0..<n {
+    for j in 0..<m {
         if arr1[i][j] != arr2[i][j] {
             print("1", terminator: " ")
         } else {
