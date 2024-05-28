@@ -2,22 +2,25 @@ import Foundation
 
 let str = readLine()!
 let strArr = Array(str)
-var cnt = strArr[0]
-var new_strArr: [String] = Array(repeating: " ", count: str.count)
+let cnt_0 = strArr[0]
+let cnt_1 = strArr[1]
+var new_strArr = strArr
 var result = ""
 
 for i in 0..<str.count {
-    if strArr[i] == cnt {
-        new_strArr[i] = "\(strArr[1])"
-    } else {
-        new_strArr[i] = "\(strArr[i])"
+    if strArr[i] == cnt_0 {
+        new_strArr[i] = strArr[1]
     }
 }
 
-new_strArr[1] = "\(strArr[0])"
-
 for j in 0..<str.count {
-    result += String(new_strArr[j])
+    if strArr[j] == cnt_1 {
+        new_strArr[j] = strArr[0]
+    }
+}
+
+for k in 0..<str.count {
+    result += String(new_strArr[k])
 }
 
 print(result)
