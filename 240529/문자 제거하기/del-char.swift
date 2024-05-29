@@ -3,13 +3,18 @@ import Foundation
 let str = readLine()!
 let str_arr = Array(str)
 var str_newArr = str_arr
+var num: [Int] = []
+
+for _ in 0..<str.count-1 {
+    var input = Int(readLine()!)!
+    num.append(input)
+}
 
 for i in 0..<str.count-1 {
-    var num = Int(readLine()!)!
-    if num > str.count {
-        str_newArr.removeLast()
+    if num[i] < str.count-1 {
+        str_newArr.remove(at: num[i])
     } else {
-        str_newArr.remove(at: num)
+        str_newArr.removeLast()
     }
     for elem in str_newArr {
         print(elem, terminator: "")
