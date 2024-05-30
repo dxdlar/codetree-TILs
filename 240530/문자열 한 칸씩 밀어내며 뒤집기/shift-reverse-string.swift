@@ -18,7 +18,8 @@ for i in 0..<q {
         str.removeLast(1)
     } else {
         // 역순
-        str = String(str.reversed())
+        print(String(str.reversed()))
+        continue
     }
     
     str_arr = Array(str)
