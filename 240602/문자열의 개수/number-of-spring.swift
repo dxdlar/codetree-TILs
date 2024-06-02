@@ -14,6 +14,12 @@ while true {
     }
 }
 
-for i in stride(from: 0, through: cnt, by: 2) {
-    print(arr[i])
+if cnt % 2 != 0 {
+    for i in stride(from: 0, through: cnt, by: 2) {
+        print(arr[i])
+    }
+} else {
+    for i in stride(from: 0, through: cnt-1, by: 2) {
+        print(arr[i])
+    }
 }
